@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<!-- Font Awesome -->
+<!--<script src="https://use.fontawesome.com/1f9b4c5827.js"></script>-->
+
+<!-- Weather Icons -- http://erikflowers.github.io/weather-icons/  -->
+<!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.10/css/weather-icons.css" />-->
+
+<html>
+
+<head>
+    <title>Local Weather</title>
+</head>
+
+<body>
+    <style>
+        @import url("https://fonts.googleapis.com/css?family=Catamaran:900");
+        @import url('https://fonts.googleapis.com/css?family=Nunito+Sans:600');
+        /*@keyframes mymove {
+            from {
+                line-height: 0px;
+            }
+            to {
+                line-height: 15px;
+            }
+        }*/
+        
+        html {
+            background: url("http://cdn.wallpapersafari.com/9/33/vSUK86.jpg") no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+        
+        #main_container {
+            margin-top: 5%;
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: black;
+            text-shadow: 2px 2px 2px white;
+            text-align: center;
+            font-family: 'Catamaran', sans-serif;
+        }
+        
+        .jumbotron {
+            opacity: 0.5;
+            border-style: solid;
+            border-radius: 5px;
+            font-family: 'Nunito Sans', sans-serif;
+            line-height: 0.5em;
+        }
+        
+        #daily {
+            margin-top: -1.875em;
+            margin-bottom: -3.125em;
+        }
+        
+        #icon {
+            margin: -1.875em 0 -2.125em 0;
+        }
+        
+        #city {
+            font-size: 3.125em;
+            /*line-height: 0px;*/
+        }
+        
+        h2 {
+            line-height: 15px;
+        }
+        
+        #wuLogo {
+            width: 15%;
+            height: auto;
+            background: black;
+        }
+        
+        footer {
+            /*position: fixed;
+            left: 1;
+            bottom: 0;
+            padding: 0 0 4px 4px;*/
+        }
+        
+        .logo {
+            text-shadow: 1px 1px white;
+        }
+        
+        .weather_icon {
+            margin-top: -15px;
+        }
+    </style>
+    <script src="weather.js"></script>
+
+    <div class="container-fluid" id="main_container">
+        <div class="row">
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                <h2 id="city"></h2>
+                <h2 id="temp" onclick="changeF(this)"></h2>
+                <h2 id="humid"></h2>
+                <h2 id="condition"><img src="#" id="icon"></h2>
+                <h2 id="wind"></h2>
+                <h2 id="feels"></h2>
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                <img id="radar" src="" alt="area radar">
+                <p></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                <div class="jumbotron">
+                    <div class="container" id="daily">
+                        <p id="day0">Tues</p>
+                        <p id="date0">Nov 28</p>
+                        <p id="day_temps0"><span id="high_temp0">50&degF</span> | <span id="low_temp0">32&degF</span></p>
+                        <p><img id="weather_icon0" src="" alt=""></p>
+                        <p id="conditions0">Partly Cloudy</p>
+                        <p><span id="precip_chance0"></span> | <span id="precip_amount0"></span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                <div class="jumbotron">
+                    <div class="container" id="daily">
+                        <p id="day1">Tues</p>
+                        <p id="date1">Nov 28</p>
+                        <p id="day_temps1"><span id="high_temp1">50&degF</span> | <span id="low_temp1">32&degF</span></p>
+                        <p><img id="weather_icon1" src="" alt=""></p>
+                        <p id="conditions1">Partly Cloudy</p>
+                        <p><span id="precip_chance1"></span> | <span id="precip_amount1"></span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 ">
+                <div class="jumbotron">
+                    <div class="container" id="daily">
+                        <p id="day2">Tues</p>
+                        <p id="date2">Nov 28</p>
+                        <p id="day_temps2"><span id="high_temp2">50&degF</span> | <span id="low_temp2">32&degF</span></p>
+                        <p><img id="weather_icon2" src="" alt=""></p>
+                        <p id="conditions2">Partly Cloudy</p>
+                        <p><span id="precip_chance2"></span> | <span id="precip_amount2"></span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 ">
+                <div class="jumbotron">
+                    <div class="container" id="daily">
+                        <p id="day3">Tues</p>
+                        <p id="date3">Nov 28</p>
+                        <p id="day_temps3"><span id="high_temp3">50&degF</span> | <span id="low_temp3">32&degF</span></p>
+                        <p><img id="weather_icon3" src="" alt=""></p>
+                        <p id="conditions3">Partly Cloudy</p>
+                        <p><span id="precip_chance3"></span> | <span id="precip_amount3"></span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="logo ">
+                <p>data from:</p>
+                <a href="https://www.wunderground.com/ " target="_blank ">
+                    <img src="https://icons.wxug.com/logos/PNG/wundergroundLogo_4c_rev_horz.png " alt="Weather Underground" id="wuLogo"></a>
+            </div>
+        </footer>
+</body>
+
+</html>
