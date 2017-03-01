@@ -100,6 +100,24 @@
         .weather_icon {
             margin-top: -15px;
         }
+        
+        .weather-wrapper {
+            /*margin-top: 10%;
+            padding: 10% 0;*/
+            border: 3px solid black;
+            border-radius: 15px;
+            background-color: rgba(255, 255, 255, 0.3);
+            min-height: 175px;
+            min-width: 125px;
+            font-family: 'Nunito Sans', sans-serif;
+            line-height: 0.5em;
+            display: table;
+        }
+        
+        .text-wrapper {
+            display: table-cell;
+            vertical-align: middle;
+        }
     </style>
     <script src="weather.js"></script>
 
@@ -120,8 +138,8 @@
         </div>
         <div class="row">
             <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-                <div class="jumbotron">
-                    <div class="container" id="daily">
+                <div class="weather-wrapper">
+                    <div class="text-wrapper">
                         <p id="day0">Tues</p>
                         <p id="date0">Nov 28</p>
                         <p id="day_temps0"><span id="high_temp0">50&degF</span> | <span id="low_temp0">32&degF</span></p>
@@ -132,8 +150,8 @@
                 </div>
             </div>
             <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-                <div class="jumbotron">
-                    <div class="container" id="daily">
+                <div class="weather-wrapper">
+                    <div class="text-wrapper">
                         <p id="day1">Tues</p>
                         <p id="date1">Nov 28</p>
                         <p id="day_temps1"><span id="high_temp1">50&degF</span> | <span id="low_temp1">32&degF</span></p>
@@ -144,8 +162,8 @@
                 </div>
             </div>
             <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 ">
-                <div class="jumbotron">
-                    <div class="container" id="daily">
+                <div class="weather-wrapper">
+                    <div class="text-wrapper">
                         <p id="day2">Tues</p>
                         <p id="date2">Nov 28</p>
                         <p id="day_temps2"><span id="high_temp2">50&degF</span> | <span id="low_temp2">32&degF</span></p>
@@ -156,8 +174,8 @@
                 </div>
             </div>
             <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 ">
-                <div class="jumbotron">
-                    <div class="container" id="daily">
+                <div class="weather-wrapper">
+                    <div class="text-wrapper">
                         <p id="day3">Tues</p>
                         <p id="date3">Nov 28</p>
                         <p id="day_temps3"><span id="high_temp3">50&degF</span> | <span id="low_temp3">32&degF</span></p>
