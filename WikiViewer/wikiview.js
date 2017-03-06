@@ -6,15 +6,17 @@ function wikiSearch() {
         url: 'http://en.wikipedia.org/w/api.php?',
         data: { action: 'opensearch', search: x, format: 'json' },
         dataType: 'jsonp',
-        success: function(y) {
-            alert(JSON.stringify(y[1][1]));
-        }
+        success: displayResults(data)
     });
 }
 // $('#myForm').on('submit', wikiSearch);
 
-$("#search-input").keyup(function(event) {
-    if (event.keyCode == 13) {
+function displayResults(x) {
+    alert(JSON.stringify(y[1][1]));
+}
+
+$("#search-input").keydown(function(event) {
+    if (event.keyCode == 13 || event.which == 13) {
         $("#search-button").click();
     }
 });
