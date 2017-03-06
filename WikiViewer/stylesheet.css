@@ -20,6 +20,21 @@ p {
     margin: -100px 0 0 -150px;
 }
 
+.wrapper {
+    position: absolute;
+    top: 15%;
+}
+
+.second {
+    /*position: absolute;*/
+    /*text-align: left;*/
+    color: black;
+    /*top: 15%;*/
+    /*margin-left: 10%;*/
+    width: 50%;
+    margin: 0 auto;
+}
+
 .random-page {
     text-align: center;
 }

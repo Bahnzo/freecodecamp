@@ -18,16 +18,19 @@
 </head>
 
 <body>
-    <div class="main">
-        <div class="random-page">
+    <div class="main" id="main">
+        <div class="random-page" id="random-page">
             <a href="#">Click HERE for a random Wikiedia page.</a>
             <p>or</p>
         </div>
         <div class="wiki-search">
-            <input id="search-input" type="text" placeholder="Search..." required>
+            <input id="search-input" type="text" placeholder="Search..." required autofocus autocomplete="off">
             <input id="search-button" type="button" onclick="wikiSearch()" value="Submit">
-            <p>Search Wikipedia</p>
+            <p id="search-text">Search Wikipedia</p>
         </div>
+    </div>
+    <div class="wrapper" id="wrapper" style="width: 100%;text-align: center">
+        <div class="second" id="second" style="display: none"></div>
     </div>
     <script src="wikiview.js"></script>
 </body>
