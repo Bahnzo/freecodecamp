@@ -8,7 +8,6 @@ $(document).ready(function() {
             type: 'Get',
             url: 'https://wind-bow.gomix.me/twitch-api/streams/' + x,
             // data: { channel: chan },
-            // headers: { 'Client-ID': 'ekr9rr6hwa4zrcgbk00jhx8zjujeks', 'Accept': 'application/vnd.twitchtv.v5+json' },
             dataType: 'json',
             success: function(data) {
                 // alert("Success");
