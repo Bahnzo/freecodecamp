@@ -1,0 +1,87 @@
+html {
+    height: 100%;
+}
+
+body {
+    /*font-family: 'Open Sans', sans-serif;*/
+    min-height: 100%;
+}
+
+.wrapper {
+    display: table;
+    margin: 0 auto;
+    width: 50%;
+    padding-top: 5%;
+}
+
+.header {
+    position: relative;
+    background-color: rgba(148, 148, 184, 0.6);
+    font-family: 'Orbitron', sans-serif;
+    color: antiquewhite;
+    font-size: 40px;
+    text-align: center;
+    font-weight: bold;
+    height: 75px;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+table {
+    font-size: 15px;
+}
+
+
+/* Sidenav Example */
+
+#mySideNav a {
+    position: absolute;
+    /* position them relative to the browser window */
+    right: 0px;
+    /*Position them outside the screen*/
+    transition: 0.3s;
+    /* add transition on hover */
+    padding: 5px;
+    width: 30px;
+    text-decoration: none;
+    text-align: left;
+    /*removes underline */
+    font-size: 10px;
+    color: white;
+    border-radius: 5px 0 0 5px;
+}
+
+#mySideNav a:hover {
+    width: 50px;
+    /* on mouse-over, make the elemnts appear */
+}
+
+#all {
+    /* the all link: 20px from the top with a green background*/
+    top: 0px;
+    background-color: green;
+}
+
+#online {
+    top: 24px;
+    background-color: blue;
+}
+
+#offline {
+    top: 48px;
+    background-color: #555;
+}
+
+.streamer-container {
+    font-family: 'Open Sans', sans-serif;
+    width: 50%;
+    margin: 0 auto;
+    height: auto;
+    /*background-color: mediumseagreen;*/
+    position: relative;
+    min-height: 100%;
+}
+
+a {
+    color: black;
+}
