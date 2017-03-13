@@ -1,6 +1,3 @@
-var mod, whole = 0;
-var hold = [];
-
 function convertToRoman(num) {
     switch (true) {
         case num >= 1000:
@@ -85,8 +82,8 @@ function fifty(num) {
 }
 
 function ten(num) {
-    whole = Math.trunc(num / 100);
-    mod = num % 100;
+    whole = Math.trunc(num / 10);
+    mod = num % 10;
     if (whole == 4) {
         hold.push('X', 'L');
     } else {
@@ -128,7 +125,9 @@ function one(num) {
 
 function assemble() {
     console.log(hold.join(""));
-    return hold.join();
+    return hold.join("");
 }
-
-convertToRoman(2);
+var hold = [];
+var whole = 0;
+var mod = 0;
+convertToRoman(425);
